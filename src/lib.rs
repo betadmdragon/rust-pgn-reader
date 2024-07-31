@@ -139,9 +139,10 @@
 #![forbid(unsafe_op_in_unsafe_fn)]
 #![warn(missing_debug_implementations)]
 
-mod reader;
-mod types;
-mod visitor;
+pub mod reader;
+pub mod types;
+pub mod visitor;
+pub mod filter;
 
 pub use reader::{BufferedReader, IntoIter};
 pub use shakmaty::{
@@ -150,3 +151,4 @@ pub use shakmaty::{
 };
 pub use types::{Nag, RawComment, RawHeader, Skip};
 pub use visitor::Visitor;
+
